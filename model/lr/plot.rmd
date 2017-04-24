@@ -1,0 +1,43 @@
+```{R}
+library('ggplot2')
+library('reshape')
+```
+
+```{R}
+cof = read.csv("./config/coe_path.csv", sep = ",", header = TRUE)
+head(cof)
+```
+
+```{R}
+cof$group = rep(1:21889, each=200)
+cof_m = melt(df, id.vars=c("group"))
+```
+
+```{R}
+xx = seq(0.01, 10, length.out=200)
+qplot(x = xx, y=cof[,3])
+```
+
+```{R}
+cv_table = read.csv("./config/cv_result.csv", sep = ",", header = TRUE)
+cv_table
+```
+
+```{R}
+p1 = ggplot(cv_table, aes(x=index, y=error)) +
+        geom_point() +
+        labs(x="Inverse of Regularization Strength", 
+             y="5-fold CV Mean Test RMSE",
+             title="5-fold Cross Validation Mean Test RMSE v.s. inverse of Lambda")
+ggsave("./plot/cv_result.png", p1, dpi=500, height=5)
+p1
+
+```
+
+
+
+
+
+
+
+

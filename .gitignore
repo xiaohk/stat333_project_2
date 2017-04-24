@@ -1,0 +1,8 @@
+glove.6B.100d.txt
+glove100d.pickle
+*.mtx
+.RData
+*.swp
+.ipynb_checkpoints
+__pycache__
+.Rhistory
