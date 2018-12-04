@@ -1,3 +1,5 @@
+![d](./banner.png)
+
 # Description
 The second project of Spring 2017 Stat 333 is a [Kaggle competition](https://www.kaggle.com/c/uw-madison-sp17-stat333), where we are asked to predict Yelp ratings based on the text comments in Madison WI area. Our group got rank one on both public and private leaderboard 🎉.
 
